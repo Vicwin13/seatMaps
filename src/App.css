@@ -1,0 +1,71 @@
+.seats {
+  border: 2px solid yellowgreen;
+  height: 1rem;
+  width: 1rem;
+  text-align: center;
+  padding: .3rem;
+}
+
+.first-class {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: .5rem;
+  width: min-content;
+  align-items: center;
+}
+
+.buzz {
+  border: 2px solid green;
+  height: 1rem;
+  width: 1rem;
+  text-align: center;
+  padding: .3rem;
+}
+
+.economy-class {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
+  width: min-content;
+  align-items: center;
+  margin: 1rem auto 0;
+}
+
+.row-number {
+  order: 3;
+}
+
+.cover {
+  /* margin: 2rem; */
+  /* display: flex; */
+  display: flex;
+  /* grid-template-columns: repeat(5, 1fr); */
+  gap: .2rem;
+  align-items: center;
+  width: fit-content;
+}
+
+.seat {
+
+  /* border: 1px solid gold; */
+  margin: 0 .3rem;
+  position: relative;
+  border-radius: 8px;
+
+}
+
+.box {
+  background-color: rgba(41, 40, 40, .9);
+  padding: 1rem;
+  border-radius: 12px;
+  display: none;
+  position: absolute;
+  left: 2rem;
+  color: wheat;
+  z-index: 10;
+  width: max-content;
+}
+
+.seat:hover .box {
+  display: block;
+}
