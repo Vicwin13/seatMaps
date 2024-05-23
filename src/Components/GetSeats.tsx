@@ -1,6 +1,7 @@
 import { Offer, Row, SeatGroup, SeatingResponse, Section } from "./types";
 import { useEffect, useState } from "react";
 
+import fine from "../App.module.css";
 import { setresdummy } from "./SeatResponseDummy";
 
 export default function GetSeats() {
@@ -43,13 +44,13 @@ export default function GetSeats() {
             offer.seatmap.sections.map((section: Section, sectionIndx) => (
               <div key={sectionIndx}>
                 {section.rows.map((row: Row) => (
-                  <div className="economy-class" key={row.row_number}>
+                  <div className={fine.economy} key={row.row_number}>
                     {row.seat_groups.map((SeatGroup, groupIndx) => (
-                      <div className="cover" key={groupIndx}>
+                      <div className={fine.cover} key={groupIndx}>
                         {SeatGroup.map((seat: SeatGroup) => (
                           <div
                             key={seat.name}
-                            className="seat"
+                            className={fine.seat}
                             style={{
                               backgroundColor:
                                 seat.state === "unavailable"
@@ -60,7 +61,7 @@ export default function GetSeats() {
                               textAlign: "center",
                               padding: "3px",
                             }}>
-                            <div className="box">
+                            <div className={fine.box}>
                               This seat is {seat.state}
                               <p>
                                 Seat N0:{" "}

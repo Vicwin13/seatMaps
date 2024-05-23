@@ -1,28 +1,4 @@
-.seats {
-  border: 2px solid yellowgreen;
-  height: 1rem;
-  width: 1rem;
-  text-align: center;
-  padding: .3rem;
-}
-
-.first-class {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: .5rem;
-  width: min-content;
-  align-items: center;
-}
-
-.buzz {
-  border: 2px solid green;
-  height: 1rem;
-  width: 1rem;
-  text-align: center;
-  padding: .3rem;
-}
-
-.economy-class {
+.economy {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: .5rem;
